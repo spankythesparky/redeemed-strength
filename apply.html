@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Train With Me — Redeemed Strength</title>
+<meta name="description" content="Apply to train with Cici — faith-led in-person and online coaching for women and moms in Galloway, Ohio.">
+<meta property="og:title" content="Train With Me — Redeemed Strength">
+<meta property="og:description" content="Apply to train with Cici — faith-led in-person and online coaching for women and moms in Galloway, Ohio.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-cover.jpg">
+<link rel="icon" type="image/png" sizes="any" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className += ' js';</script>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Redeemed Strength home"><img class="logo" src="logo.png" alt="Redeemed Strength"></a>
+    <nav class="nav-links" id="navlinks">
+      <a class="lnk" href="index.html">Home</a>
+      <a class="lnk" href="about.html">About</a>
+      <a class="lnk" href="train.html">Train</a>
+      <a class="lnk" href="fuel.html">Fuel</a>
+      <a class="lnk" href="stories.html">Stories</a>
+      <a class="lnk" href="contact.html">Contact</a>
+      <div class="nav-social">
+        <a href="https://www.instagram.com/cicimomfit/" target="_blank" rel="noopener" aria-label="Follow on Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="http://www.tiktok.com/@cici_momfit" target="_blank" rel="noopener" aria-label="Follow on TikTok"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M16.5 3c.32 2.1 1.5 3.55 3.5 3.86v2.4c-1.27.08-2.45-.3-3.55-1.02v6.36c0 3.18-2.4 5.4-5.32 5.4-2.7 0-4.88-2.02-4.88-4.74 0-2.94 2.44-4.86 5.6-4.5v2.52c-.42-.12-.9-.16-1.32-.1-1.08.14-1.86 1-1.78 2.08.08 1 .96 1.8 1.96 1.8 1.2 0 2.12-.92 2.12-2.32V3h3.17z"/></svg></a>
+      </div>
+      <a class="btn btn-primary" href="apply.html">Start training</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<!-- ===== APPLY / TRAINING APPLICATION =====
+     Connected to Formspree endpoint mqeowlkw. Mirrors Cici's original Google Form training
+     application. Submits via AJAX (shared handler in app.js); the FIRST submission triggers a
+     one-time Formspree confirmation email — click the link in it to activate delivery. -->
+<section class="apply pad" id="apply">
+  <div class="wrap">
+    <div class="apply-head reveal">
+      <span class="eyebrow">Train with me</span>
+      <h1>Ready to train with Cici?</h1>
+      <p class="lead">Whether you're just starting out or ready to level up, this is where we begin. Fill out the questions below so I can understand your goals, availability, and preferences — then I'll review your request and reach out about next steps. Let's build the best version of YOU, together. ❤️</p>
+    </div>
+
+    <div class="form-card apply-card reveal" data-d="1">
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      <form id="contactForm" action="https://formspree.io/f/mqeowlkw" method="POST">
+
+        <div class="form-block">
+          <div class="form-section">Your contact info</div>
+          <div class="form-row">
+            <div class="field">
+              <label for="ap-name">Full name <span class="req">*</span></label>
+              <input id="ap-name" type="text" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="ap-email">Email <span class="req">*</span></label>
+              <input id="ap-email" type="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="ap-phone">Phone number <span class="req">*</span></label>
+            <input id="ap-phone" type="tel" name="phone" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="form-block">
+          <div class="form-section">Your goals</div>
+          <div class="field">
+            <label for="ap-goals">Fitness goals <span class="req">*</span></label>
+            <p class="hint">Your main goals — e.g. weight loss, strength building, confidence.</p>
+            <textarea id="ap-goals" name="fitness-goals" required></textarea>
+          </div>
+          <div class="field">
+            <label for="ap-specific">What do you hope to achieve working with me? <span class="req">*</span></label>
+            <p class="hint">Be as specific as you can — physique, health, mindset, anything.</p>
+            <textarea id="ap-specific" name="specific-goals" required></textarea>
+          </div>
+          <div class="field">
+            <label for="ap-struggle">What are you currently struggling with to reach these goals? <span class="req">*</span></label>
+            <textarea id="ap-struggle" name="current-struggles" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-block">
+          <div class="form-section">Your preferences</div>
+          <div class="field">
+            <label>Preferred workout type <span class="req">*</span></label>
+            <div class="pillset">
+              <label class="pill"><input type="radio" name="workout-type" value="Cardio" required><span>Cardio</span></label>
+              <label class="pill"><input type="radio" name="workout-type" value="Strength Training"><span>Strength Training</span></label>
+              <label class="pill"><input type="radio" name="workout-type" value="Yoga"><span>Yoga</span></label>
+              <label class="pill"><input type="radio" name="workout-type" value="Pilates"><span>Pilates</span></label>
+              <label class="pill"><input type="radio" name="workout-type" value="HIIT"><span>HIIT</span></label>
+              <label class="pill"><input type="radio" name="workout-type" value="Dance Fitness"><span>Dance Fitness</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Preferred time <span class="req">*</span></label>
+            <div class="pillset">
+              <label class="pill"><input type="radio" name="preferred-time" value="Morning" required><span>Morning</span></label>
+              <label class="pill"><input type="radio" name="preferred-time" value="Afternoon"><span>Afternoon</span></label>
+              <label class="pill"><input type="radio" name="preferred-time" value="Evening"><span>Evening</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Available days</label>
+            <p class="hint">Select all that work for you.</p>
+            <div class="pillset">
+              <label class="pill"><input type="checkbox" name="available-days" value="Monday"><span>Mon</span></label>
+              <label class="pill"><input type="checkbox" name="available-days" value="Tuesday"><span>Tue</span></label>
+              <label class="pill"><input type="checkbox" name="available-days" value="Wednesday"><span>Wed</span></label>
+              <label class="pill"><input type="checkbox" name="available-days" value="Thursday"><span>Thu</span></label>
+              <label class="pill"><input type="checkbox" name="available-days" value="Friday"><span>Fri</span></label>
+              <label class="pill"><input type="checkbox" name="available-days" value="Saturday"><span>Sat</span></label>
+              <label class="pill"><input type="checkbox" name="available-days" value="Sunday"><span>Sun</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Fitness experience level <span class="req">*</span></label>
+            <div class="pillset">
+              <label class="pill"><input type="radio" name="experience-level" value="Beginner" required><span>Beginner</span></label>
+              <label class="pill"><input type="radio" name="experience-level" value="Intermediate"><span>Intermediate</span></label>
+              <label class="pill"><input type="radio" name="experience-level" value="Advanced"><span>Advanced</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Motivation level <span class="req">*</span></label>
+            <p class="hint">1 = just getting started, 10 = all in.</p>
+            <div class="pillset nums">
+              <label class="pill"><input type="radio" name="motivation-1-10" value="1" required><span>1</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="2"><span>2</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="3"><span>3</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="4"><span>4</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="5"><span>5</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="6"><span>6</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="7"><span>7</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="8"><span>8</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="9"><span>9</span></label>
+              <label class="pill"><input type="radio" name="motivation-1-10" value="10"><span>10</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-block">
+          <div class="form-section">A few last things</div>
+          <div class="field">
+            <label for="ap-health">Health considerations <span class="req">*</span></label>
+            <p class="hint">Any concerns or conditions I should be aware of.</p>
+            <textarea id="ap-health" name="health-considerations" required></textarea>
+          </div>
+          <div class="field">
+            <label for="ap-heard">How did you hear about CICIMOMFIT? <span class="req">*</span></label>
+            <select id="ap-heard" name="heard-about" required>
+              <option value="" disabled selected>Choose one…</option>
+              <option>Social Media</option>
+              <option>Friend or Family</option>
+              <option>Advertisement</option>
+              <option>Event or Workshop</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>I love working with people who are 100% ready to commit and put their ALL into this program. Is that you? <span class="req">*</span></label>
+            <div class="pillset">
+              <label class="pill"><input type="radio" name="commitment" value="100%" required><span>100%</span></label>
+              <label class="pill"><input type="radio" name="commitment" value="Need more info"><span>Need more info</span></label>
+            </div>
+          </div>
+        </div>
+
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="New training application — Redeemed Strength">
+        <button class="btn btn-primary" id="cfSubmit" type="submit">Submit application <span class="arr">→</span></button>
+        <p class="form-note">Once you submit, I'll review your request and reach out about next steps.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="index.html" class="brand"><span class="dot"></span>Redeemed&nbsp;Strength</a>
+        <p class="ftag">Faith-led fitness helping women and moms build real strength, confidence, and healthy habits that last.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>Train</h5>
+          <a href="apply.html">In-person training</a>
+          <a href="https://partiful.com/e/h7afvxPMV4Q0f3RrhO4z?c=OdfejBzJ" target="_blank" rel="noopener">Hybrid training club</a>
+          <a href="https://www.skool.com/redeemed-strength-1769/about?ref=dee3fc25925d4759acbae9085fc56fc7" target="_blank" rel="noopener">Free community</a>
+        </div>
+        <div class="foot-col">
+          <h5>Shop</h5>
+          <a href="https://1stphorm.com/Cicimomfit" target="_blank" rel="noopener">1st Phorm</a>
+          <a href="https://rfaskincare.com/collections/shop/?rfsn=8868103.50e92f" target="_blank" rel="noopener">RFA Skincare</a>
+          <a href="https://tinyurl.com/2zw4y7rf" target="_blank" rel="noopener">Amazon finds</a>
+        </div>
+        <div class="foot-col">
+          <h5>Connect</h5>
+          <a href="https://www.instagram.com/cicimomfit/" target="_blank" rel="noopener">Instagram</a>
+          <a href="http://www.tiktok.com/@cici_momfit" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://linktr.ee/cicimomfit" target="_blank" rel="noopener">Linktree</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> Redeemed Strength. All rights reserved.</span>
+      <span>Galloway, Ohio · Made with ♥</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
