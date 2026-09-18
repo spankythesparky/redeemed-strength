@@ -129,11 +129,22 @@
   .pmedia{position:relative;width:fit-content}
   .portrait .frame{
     position:relative;
-    width:clamp(260px,34vw,420px);aspect-ratio:4/5;overflow:hidden;
-    border-radius:54% 46% 47% 53% / 38% 41% 59% 62%;
-    box-shadow:0 40px 80px -30px rgba(74,82,54,.45);
+    width:clamp(260px,33vw,400px);aspect-ratio:4/5;overflow:hidden;
+    border-radius:200px 200px 24px 24px;
+    box-shadow:0 50px 90px -34px rgba(74,82,54,.5);
     background:linear-gradient(150deg,var(--blush) 0%,var(--petal) 100%);
-    animation:morph 14s ease-in-out infinite;
+  }
+  .pmedia::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    transform:translate(20px,20px);
+    border-radius:200px 200px 24px 24px;
+    border:1.5px solid var(--petal);opacity:.7;
+  }
+  .pmedia::after{
+    content:"";position:absolute;inset:0;z-index:-2;
+    transform:translate(38px,40px);
+    border-radius:200px 200px 24px 24px;
+    background:var(--blush-2);opacity:.45;
   }
   .portrait .frame .monogram{
     position:absolute;inset:0;display:grid;place-items:center;text-align:center;
@@ -142,11 +153,7 @@
   }
   .portrait .frame .monogram b{display:block;font-size:clamp(3.2rem,7vw,5rem);font-weight:500}
   .portrait .frame .monogram small{display:block;font-family:var(--f-body);font-style:normal;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--berry-soft);margin-top:.9em;opacity:.8}
-  .portrait .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:opacity .6s var(--ease)}
-  @keyframes morph{
-    0%,100%{border-radius:54% 46% 47% 53% / 38% 41% 59% 62%}
-    50%{border-radius:44% 56% 58% 42% / 52% 45% 55% 48%}
-  }
+  .portrait .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:opacity .6s var(--ease)}
   /* little about card */
   .meet{
     background:#fff;border:1px solid var(--blush-2);border-radius:22px;
