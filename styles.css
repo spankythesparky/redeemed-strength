@@ -432,6 +432,7 @@
   .strip-track a:hover img{transform:scale(1.06)}
   @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-2904px)}}
   @media (prefers-reduced-motion:reduce){.strip-track{animation:none}}
+  #challenge{scroll-margin-top:88px}
   /* ---------- 8-week challenge ---------- */
   .challenge{background:linear-gradient(160deg,var(--berry),var(--berry-soft) 70%);color:#fff;overflow:hidden}
   .challenge-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(34px,5vw,64px);align-items:center}
@@ -448,6 +449,18 @@
   .challenge-media{position:relative}
   .challenge-media img{display:block;width:100%;border-radius:22px;box-shadow:0 40px 80px -30px rgba(0,0,0,.5);border:5px solid rgba(255,255,255,.25)}
   .challenge-media .tag{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);background:#fff;color:var(--berry);font-family:var(--f-display);font-size:.94rem;font-weight:600;padding:9px 22px;border-radius:999px;box-shadow:0 20px 40px -18px rgba(0,0,0,.5);white-space:nowrap}
+  /* ---------- Hero announcement banner ---------- */
+  .hero-banner{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+    width:100%;margin:0 0 34px;padding:13px 22px;border-radius:16px;text-decoration:none;
+    background:linear-gradient(100deg,var(--berry),var(--berry-soft));color:#fff;
+    box-shadow:0 18px 40px -22px rgba(74,82,54,.7);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .hero-banner:hover{transform:translateY(-2px);box-shadow:0 24px 50px -22px rgba(74,82,54,.8)}
+  .hero-banner .pill{background:rgba(255,255,255,.2);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 11px;border-radius:999px;white-space:nowrap}
+  .hero-banner .msg{font-size:1rem;font-weight:600}
+  .hero-banner .go{font-weight:700;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .hero-banner .go .arr{transition:transform .3s var(--ease)}
+  .hero-banner:hover .go .arr{transform:translateY(3px)}
+  @media (max-width:680px){.hero-banner{margin-bottom:26px;padding:12px 16px;gap:8px}.hero-banner .msg{font-size:.9rem}.hero-banner .go{font-size:.9rem}}
   /* ---------- Footer ---------- */
   footer{background:var(--ink);color:#E7E3D6;padding:64px 0 36px}
   .foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
