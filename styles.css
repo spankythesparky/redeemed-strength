@@ -562,6 +562,8 @@
     .t-grid{columns:1}
     .train-grid{grid-template-columns:1fr}
     .form-row{grid-template-columns:1fr;gap:0}
+    .event-meta{grid-template-columns:1fr;gap:14px}
+    .event-cta{flex-direction:column;align-items:center;gap:12px}
     .values-grid{grid-template-columns:1fr}
     .nav-links .nav-social{margin-top:10px;gap:22px}
     .nav-links .nav-social svg{width:26px;height:26px}
